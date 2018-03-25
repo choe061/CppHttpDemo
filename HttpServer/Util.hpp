@@ -19,7 +19,6 @@ namespace Util {
 	public:
 		static std::vector<std::string> split(std::string str, char seperator) {
 			std::vector<std::string> output;
-
             // prev_pos = start, pos = end
 			std::string::size_type prev_pos = 0, pos = 0;
             /**

@@ -53,16 +53,23 @@ namespace MetaHttp {
 			m_headers.push_back(header);
 		}
 
+        /**
+         * Body(본문)는 두 개의 헤더(Content-Type, Content-Length)에 의해 정의된다.
+         * body를 저장하고, Content-Length도 저장!!!
+         */
 		void setBody(const std::string str) {
 			m_body.set(str);
-
+            
 			HttpMessageHeader* headContentLen = findHeader("Content-Length");
-			if (headContentLen == nullptr)
+            if (headContentLen == nullptr) {
 				addHeader(HttpMessageHeader("Content-Length", std::to_string(str.length())));
-			else
+            } else {
 				headContentLen->setValue(std::to_string(str.length()));
+            }
 		}
-		void                   setBody(File file) { setBody(file.read()); }
+        
+		void setBody(File file) { setBody(file.read()); }
+        
 		const HttpMessageBody* getBody() const { return &this->m_body; }
 	};
 }

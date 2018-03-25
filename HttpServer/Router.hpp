@@ -18,7 +18,9 @@ using namespace MetaIO;
 class Router : public Singleton<Router> {
 private:
     /**
-     * HttpResponse*(const HttpRequest&)는 뭐지???
+     * HttpResponse*(const HttpRequest&)는 뭐지??? => "복사 생성자"
+     * 문법) 복사 생성자란?
+     * 
      * HttpResponse와 HttpRequest 모두 HttpMessageBase를 상속받고있고,
      * HttpMessageBase() = default;가 선언되어 있기 때문에 가능한 문법
      */
