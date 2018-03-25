@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\Socket">
+      <UniqueIdentifier>{7e948cec-133f-4835-a4c3-acaa864f9dc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Socket">
+      <UniqueIdentifier>{64baac32-2c91-49f7-b2c7-dfebeb3b1267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\HTTP">
+      <UniqueIdentifier>{c355055d-3fee-433b-9230-a192070ba9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\File">
+      <UniqueIdentifier>{1d39b083-57a7-40aa-ae81-7fd428730333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Util">
+      <UniqueIdentifier>{52621ac8-d311-4424-a6d9-e8d4b6108896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Router">
+      <UniqueIdentifier>{f861cdbd-3f85-4407-8bed-55ce83fc1484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\HTTP\HttpMessage">
+      <UniqueIdentifier>{e919e09e-909f-4a40-a7ea-8b99a1620d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\HTTP\Module">
+      <UniqueIdentifier>{a504d10d-7adb-48ea-aadd-3eb2a26f0a7b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaSocket.cpp">
+      <Filter>소스 파일\Socket</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="File.hpp">
+      <Filter>헤더 파일\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.hpp">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.hpp">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Router.hpp">
+      <Filter>헤더 파일\Router</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpMessageBody.hpp">
+      <Filter>헤더 파일\HTTP\HttpMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpMessageHeader.hpp">
+      <Filter>헤더 파일\HTTP\HttpMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpResponse.hpp">
+      <Filter>헤더 파일\HTTP\HttpMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaHttp.h">
+      <Filter>헤더 파일\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpRequest.hpp">
+      <Filter>헤더 파일\HTTP\HttpMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="URL.hpp">
+      <Filter>헤더 파일\HTTP\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Cookie.hpp">
+      <Filter>헤더 파일\HTTP\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpMessageBase.hpp">
+      <Filter>헤더 파일\HTTP\HttpMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaSocket.hpp">
+      <Filter>헤더 파일\Socket</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
