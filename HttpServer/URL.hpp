@@ -29,6 +29,9 @@ namespace MetaHttp {
         /**
          * HTTP, localhost, path
          * port 번호는 필요 없나???
+         * GET과 POST에 따라 URL 생성자를 다르게 둠
+         * GET  => remain = urlPath + Querystring
+         * POST => remain = urlPath
          */
 		URL(std::string protocol, std::string hostname, std::string remain) {
 			this->m_protocol = protocol;
@@ -109,7 +112,7 @@ namespace MetaHttp {
 		}
         
         /**
-         * Querystring
+         * Querystring => map<key, value>
          */
 		void setFullQuery(std::string str) {
 			std::vector<std::string> querySplits = Util::StringUtil::split(str, '&');
@@ -120,6 +123,9 @@ namespace MetaHttp {
 			}
 		}
         
+        /**
+         * key에 해당하는 Querystring이 있으면 리턴
+         */
 		std::string getQueryElem(std::string key) const { 
 			auto iter = m_querys.find(key);
 			if (iter != m_querys.end())
@@ -127,6 +133,7 @@ namespace MetaHttp {
 
 			return "";
 		}
+        
 		void setQueryElem(std::string key, std::string value) {
 			auto iter = m_querys.find(key);
 			if (iter != m_querys.end())

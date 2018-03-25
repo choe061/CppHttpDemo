@@ -138,6 +138,7 @@ int main() {
          * response를 JSON으로 보낼수는 없을까???
          */
 		clnt->send(resStr.c_str(), resStr.length());
+        // send 후 소켓을 close()
 		clnt->close();
 
 

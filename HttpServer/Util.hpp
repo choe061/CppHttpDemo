@@ -20,13 +20,23 @@ namespace Util {
 		static std::vector<std::string> split(std::string str, char seperator) {
 			std::vector<std::string> output;
 
+            // prev_pos = start, pos = end
 			std::string::size_type prev_pos = 0, pos = 0;
+            /**
+             * string.find()는 찾는 단어나, 문자열이 없으면 string::npos를 리턴
+             * seperator라는 단어를 pos위치부터 찾기 시작한다.
+             * find()함수는 첫번째로 일치하는 위치(index)를 리턴 or npos 리턴
+             */
 			while ((pos = str.find(seperator, pos)) != std::string::npos)
 			{
 				std::string substring(str.substr(prev_pos, pos - prev_pos));
 				output.push_back(substring);
 				prev_pos = ++pos;
 			}
+            /**
+             * 마지막 남은 문자열까지 추가
+             * a=1&b=1인 경우 위의 while문에서 a=1만 output에 추가되고 b=1은 추가되지 않음
+             */
 			output.push_back(str.substr(prev_pos, pos - prev_pos));
 
 			return output;
